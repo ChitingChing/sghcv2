@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.ultimatesoftware.controllers.SearchPatientController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="494.0" text="Búsqueda de Paciente">
+         <font>
+            <Font name="Microsoft Sans Serif" size="36.0" />
+         </font>
+      </Label>
+      <TitledPane collapsible="false" prefHeight="76.0" text="Datos para búsqueda de paciente">
+         <content>
+            <HBox alignment="CENTER" prefHeight="53.0" prefWidth="600.0" spacing="30.0">
+               <children>
+                  <Label text="Búsqueda por:" />
+                  <VBox>
+                     <children>
+                        <RadioButton fx:id="rdbCedula" mnemonicParsing="false" selected="true" text="Cédula">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rdbNombres" mnemonicParsing="false" text="Nombres" toggleGroup="$group" />
+                     </children>
+                  </VBox>
+                  <CustomTextField fx:id="txtCedula" promptText="Cédula">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CustomTextField>
+                  <CustomTextField fx:id="txtNombres" promptText="Nombres y Apellidos">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CustomTextField>
+                  <Button fx:id="btnBuscar" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#buscarPacientes" text="Buscar">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SEARCH" />
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnNuevoPaciente" contentDisplay="RIGHT" mnemonicParsing="false" text="Nuevo">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </content>
+      </TitledPane>
+      <HBox alignment="TOP_CENTER" spacing="30.0">
+         <children>
+            <TableView fx:id="tblPacientes" minWidth="700.0" prefHeight="388.0" prefWidth="700.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="colIdentificacion" minWidth="100.0" prefWidth="-1.0" text="Identificacion" />
+                  <TableColumn fx:id="colPrimerNombre" minWidth="100.0" prefWidth="-1.0" text="Primer Nombre" />
+                  <TableColumn fx:id="colSegundoNombre" minWidth="100.0" prefWidth="-1.0" text="Segundo Nombre" />
+                  <TableColumn fx:id="colPrimerApellido" minWidth="100.0" prefWidth="-1.0" text="Primer Apellido" />
+                  <TableColumn fx:id="colSegundoApellido" minWidth="100.0" prefWidth="-1.0" text="Segundo Apellido" />
+                  <TableColumn fx:id="colHistorial" minWidth="100.0" prefWidth="-1.0" text="N° Historia Clínica" />
+                  <TableColumn fx:id="colTelefono" minWidth="100.0" prefWidth="-1.0" text="Teléfono" />
+               </columns>
+            </TableView>
+            <VBox>
+               <children>
+                  <TableView fx:id="tblVisitas" minWidth="100.0" prefHeight="388.0" prefWidth="100.0" tableMenuButtonVisible="true">
+                     <columns>
+                        <TableColumn fx:id="colFechaVisita" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Fecha Visita" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnNuevoEmbarazo" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showNuevoEmbarazo" text="Nuevo Embarazo">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PLUS_CIRCLE" />
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

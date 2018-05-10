@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import impl.org.controlsfx.skin.DecorationPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+<?import org.controlsfx.control.PrefixSelectionComboBox?>
+<?import org.controlsfx.control.ToggleSwitch?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<DecorationPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.ultimatesoftware.controllers.RegistroInformacionController">
+   <children>
+      <StackPane>
+         <children>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" spacing="5.0">
+               <children>
+                  <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" style="-fx-border-color: gray;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Información Personal">
+                           <content>
+                              <VBox alignment="TOP_CENTER" minWidth="-Infinity" prefHeight="415.0" spacing="5.0">
+                                 <children>
+                                    <TitledPane collapsible="false" text="Datos Personales">
+                                       <content>
+                                          <GridPane alignment="TOP_CENTER" hgap="10.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label text="Cédula:" />
+                                                <Label text="Primer Apellido:" GridPane.rowIndex="1" />
+                                                <Label text="Primer Nombre:" GridPane.rowIndex="2" />
+                                                <CustomTextField fx:id="txtIdentificacion" GridPane.columnIndex="1" />
+                                                <CustomTextField fx:id="txtPrimerApellido" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <CustomTextField fx:id="txtPrimerNombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Label text="Segundo Apellido:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <Label text="Segundo Nombre:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                <Label text="Provincia:" GridPane.rowIndex="3" />
+                                                <Label text="Dirección:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                <Label text="Teléfono:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                <Label text="Email:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                <CustomTextField fx:id="txtSegundoApellido" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                <CustomTextField fx:id="txtSegundoNombre" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                <CustomTextField fx:id="txtDireccion" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                <CustomTextField fx:id="txtEmail" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                                <CustomTextField fx:id="txtTelefono" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                <Label text="Fecha de Nacimiento:" GridPane.columnIndex="2" />
+                                                <DatePicker fx:id="dtpFechaNac" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" />
+                                                <Label text="Alfabeta:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                <Label text="Estado Civil:" GridPane.rowIndex="5" />
+                                                <PrefixSelectionComboBox fx:id="cmbEstadoCivil" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="142.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Label text="Estudios:" GridPane.rowIndex="6" />
+                                                <PrefixSelectionComboBox fx:id="cmbEstudios" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="142.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <CheckBox fx:id="chkAlfabeta" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                                <Label text="Cantón:" GridPane.rowIndex="4" />
+                                                <PrefixSelectionComboBox fx:id="cmbProvincia" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="142.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <PrefixSelectionComboBox fx:id="cmbCanton" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="142.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                             </children>
+                                          </GridPane>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                      </Tab>
+                      <Tab text="Antecedentes">
+                           <content>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT">
+                                       <children>
+                                          <ToggleSwitch fx:id="switchAntecedentes" text="Editar">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </ToggleSwitch>
+                                       </children>
+                                    </HBox>
+                                    <TitledPane fx:id="tpaneAntecedentes" animated="false" collapsible="false" disable="true" text="Antecedentes">
+                                       <content>
+                                          <GridPane prefWidth="628.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="176.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="432.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Antecedentes Personales:" />
+                                                <Label text="Antecedentes Familiares:" GridPane.rowIndex="1" />
+                                                <Label text="Antecedentes Otros:" GridPane.rowIndex="2" />
+                                                <CustomTextField fx:id="txtAntecedentesOtros" minWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <CheckComboBox fx:id="chkcmbAntecedentesPersonales" GridPane.columnIndex="1" />
+                                                <CheckComboBox fx:id="chkcmbAntecedentesFamiliares" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="tpaneAntecedentesObstetricos" animated="false" collapsible="false" disable="true" maxHeight="-Infinity" minWidth="-Infinity" text="Antecedentes Obstetricos">
+                                       <content>
+                                          <GridPane hgap="10.0" minWidth="-Infinity">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="124.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="151.0" prefWidth="151.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="130.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label text="Algún RN menor a 2500 gr.:" />
+                                                <Label text="Gemelares:" GridPane.columnIndex="2" />
+                                                <CheckBox fx:id="chkRn" mnemonicParsing="false" GridPane.columnIndex="1" />
+                                                <CheckBox fx:id="chkGemelares" mnemonicParsing="false" GridPane.columnIndex="3" />
+                                                <Label text="Gestas:" GridPane.rowIndex="1" />
+                                                <Label text="Partos:" GridPane.rowIndex="2" />
+                                                <Label text="Cesáreas:" GridPane.rowIndex="3" />
+                                                <Label text="Abortos" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <Label text="Fin Anterior Embarazo:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                <Label text="Muertos 1ra Semana:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                <Label text="Nacidos Muertos:" GridPane.rowIndex="4" />
+                                                <Label text="RN con mayor peso (gr):" GridPane.rowIndex="6" />
+                                                <Label text="Muertos Después 1ra Semana:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                <Label text="Viven:" GridPane.rowIndex="5" />
+                                                <Label text="Nacidos vivos:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                <Label text="Vaginales:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                <CustomTextField fx:id="txtRn" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <HBox GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                                   <children>
+                                                      <DatePicker fx:id="dtpFechaFinAnteriorEmbrazo" minWidth="-Infinity" prefHeight="25.0" prefWidth="149.0" />
+                                                   </children>
+                                                </HBox>
+                                                <Spinner fx:id="txtGestas" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="txtAbortos" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                <Spinner fx:id="txtPartos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="txtVaginales" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                <Spinner fx:id="txtCesareas" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="txtNacidosVivos" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                <Spinner fx:id="txtNacidosMuertos" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="txtMuertoPrimeraSemana" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                <Spinner fx:id="txtViven" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <Spinner fx:id="txtMuertoDespPriSemana" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                             </children>
+                                          </GridPane>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                      </Tab>
+                        <Tab text="Embarazo">
+                           <content>
+                              <VBox>
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT">
+                                       <children>
+                                          <ToggleSwitch fx:id="switchEmbarazo" text="Editar">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </ToggleSwitch>
+                                       </children>
+                                    </HBox>
+                                    <TitledPane fx:id="tpaneEmbarazo" animated="false" collapsible="false" disable="true" text="Datos del Embarazo">
+                                       <content>
+                                          <GridPane hgap="5.0" vgap="5.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="50.0" minHeight="10.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="25.0" minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="FUM:" GridPane.columnIndex="4" />
+                                                <Label prefWidth="100.0" text="Antitetánica  1  (Mes Gestación):" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                <Label text="Talla (cm):" GridPane.columnIndex="2" />
+                                                <Label text="Dudas:" GridPane.rowIndex="1" />
+                                                <CustomTextField fx:id="txtPesoAnterior" GridPane.columnIndex="1" />
+                                                <CustomTextField fx:id="txtTalla" GridPane.columnIndex="3" />
+                                                <DatePicker fx:id="dtpFum" GridPane.columnIndex="5" />
+                                                <Label text="Antitetánica:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <DatePicker fx:id="dtpFpp" GridPane.columnIndex="7" />
+                                                <Label text="Grupo Sanguíneo:" GridPane.rowIndex="2" />
+                                                <Label text="Cigarrillos por día:" GridPane.rowIndex="3" />
+                                                <Label text="Pelvis:" GridPane.rowIndex="4" />
+                                                <Label text="RH:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                <Label text="Ex. Clínico:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                <Label text="Papanicolao:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                <Label text="Sensibilidad:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                <Label text="Ex. Mamas:" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                <Label text="FPP:" GridPane.columnIndex="6" />
+                                                <CustomTextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                <Label text="Peso Anterior (Kg):" />
+                                                <CustomTextField fx:id="txtAntitetanica1Mes" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                <Label prefWidth="100.0" text="Antitetánica  2  (Mes Gestación):" wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                                <CustomTextField fx:id="txtAntitetanica2Mes" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                                                <PrefixSelectionComboBox fx:id="cmbGrupoSanguineo" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <PrefixSelectionComboBox fx:id="cmbRh" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                <Label text="Fuma:" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                                <CustomTextField fx:id="txtCigarrillosPorDia" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Label text="Ex. Odontológico:" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                                <Label text="Colposcopia:" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                                <Label text="Cervix:" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                                                <Label text="VDRL:" GridPane.rowIndex="5" />
+                                                <Label text="Glucosa:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                <Label text="Hb (1) g/dl:" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                                <Label text="Fecha Hb (1) g/dl:" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                                <Label text="Hb (2) g/dl:" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                                                <CustomTextField GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                                                <DatePicker fx:id="dtpHb1" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                                                <Label text="Fecha Hb (1) g/dl:" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                                                <DatePicker fx:id="dtpHb2" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                                                <CustomTextField fx:id="txtHb1" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                                                <CustomTextField fx:id="txtHb2" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                                                <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                                <PrefixSelectionComboBox fx:id="cmbVdrl" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <DatePicker fx:id="dtpGlucosa" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                                <Label text="Fecha Glucosa:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                <CustomTextField fx:id="txtGlucosa" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                                <Label text="Fecha VDRL:" GridPane.rowIndex="6" />
+                                                <DatePicker fx:id="dtpFechaVdrl" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <CheckBox fx:id="chkDudas" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <CheckBox fx:id="chkPelvis" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <CheckBox fx:id="chkAntitetanica" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                <CheckBox fx:id="chkSensibilidad" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                                <CheckBox fx:id="chkFuma" mnemonicParsing="false" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                                                <CheckBox fx:id="chkExClinico" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                <CheckBox fx:id="chkExMamas" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                                <CheckBox fx:id="chkExOdontologico" mnemonicParsing="false" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                                                <CheckBox fx:id="chkPapanicolao" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                <CheckBox fx:id="chkColposcopia" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                                                <CheckBox fx:id="chkCervix" mnemonicParsing="false" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                                                <Label text="Hospitalización:" GridPane.rowIndex="7" />
+                                                <Label text="Traslado:" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                                <Label text="Lugar:" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                                <CheckBox fx:id="chkHospitalizacion" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                <CheckBox fx:id="chkTraslado" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                                <CustomTextField fx:id="txtLugarTraslado" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                                             </children>
+                                          </GridPane>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </Tab>
+                        <Tab text="Consultas Embarazo">
+                           <content>
+                              <VBox alignment="TOP_CENTER" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT">
+                                       <children>
+                                          <ToggleSwitch fx:id="switchConsultaEmbarazo" text="Editar">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </ToggleSwitch>
+                                       </children>
+                                    </HBox>
+                                    <TitledPane fx:id="tpaneConsultaEmbarazo" collapsible="false" disable="true" maxWidth="-Infinity" prefWidth="800.0" text="Datos de la Consulta del Embarazo">
+                                       <content>
+                                          <VBox spacing="10.0">
+                                             <children>
+                                                <GridPane hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" vgap="5.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="150.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" prefWidth="150.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" prefWidth="150.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" prefWidth="150.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label minHeight="-Infinity" text="Fecha de la Consulta:" wrapText="true" />
+                                                      <Label text="Movimiento Fetal:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <Label text="Presentación:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                      <Label text="F.C.F. :" GridPane.rowIndex="2" />
+                                                      <Label text="Alt. Uterina:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Label text="Tension Arterial:" GridPane.rowIndex="1" />
+                                                      <Label text="Peso (Kg):" GridPane.columnIndex="4" />
+                                                      <Label maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" text="Semana de Amenorreas:" wrapText="true" GridPane.columnIndex="2" />
+                                                      <Label text="Edema:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                      <Label text="Albuminuria:" GridPane.rowIndex="3" />
+                                                      <Label text="Sangrado Genital:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                      <Label text="Examinador:" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                      <DatePicker fx:id="dtpFechaConsulta" GridPane.columnIndex="1" />
+                                                      <CustomTextField fx:id="txtSemanaAmenorreas" GridPane.columnIndex="3" />
+                                                      <CustomTextField fx:id="txtPeso" GridPane.columnIndex="5" />
+                                                      <CustomTextField fx:id="txtTensionArterialConsulta" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtAltUterina" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtFcf" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <CustomTextField fx:id="txtMovFetal" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                      <CustomTextField fx:id="txtEdema" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                                      <CustomTextField fx:id="txtAlbuminuria" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <CustomTextField fx:id="txtExaminador" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                                      <CustomTextField fx:id="txtSangradoGenital" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                      <PrefixSelectionComboBox fx:id="cmbPresentacion" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                                <HBox alignment="TOP_RIGHT" maxWidth="-Infinity" prefWidth="800.0" spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="btnNuevoConsulta" mnemonicParsing="false" text="Nuevo" />
+                                                      <Button fx:id="btnEliminarConsulta" mnemonicParsing="false" onAction="#borrarConsulta" text="Eliminar" />
+                                                      <Button fx:id="txtAgregarConsulta" mnemonicParsing="false" onAction="#agregarConsulta" text="Agregar" />
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="gridConsulta" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="800.0" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </Tab>
+                        <Tab text=" Parto">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT">
+                                       <children>
+                                          <ToggleSwitch fx:id="switchParto" text="Editar">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </ToggleSwitch>
+                                       </children>
+                                    </HBox>
+                                    <TitledPane fx:id="tpaneParto" animated="false" disable="true" text="Datos del parto">
+                                       <content>
+                                          <VBox prefWidth="100.0">
+                                             <children>
+                                                <GridPane hgap="5.0" vgap="5.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Aborto:" />
+                                                      <Label text="Temperatura (°C):" GridPane.rowIndex="1" />
+                                                      <Label text="Inicio:" GridPane.rowIndex="2" />
+                                                      <Label minHeight="-Infinity" text="N° Consulta Prenatal:" wrapText="true" GridPane.columnIndex="2" />
+                                                      <Label maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" text="Edad Gestacional (Semanas):" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Label text="Membranas:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <VBox GridPane.columnIndex="4">
+                                                         <children>
+                                                            <Label text="En el hospital:" />
+                                                            <Label text="Con carné:" />
+                                                         </children>
+                                                      </VBox>
+                                                      <Label text="Presentación:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                      <Label text="Fecha de Ruptura:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                      <Label minHeight="-Infinity" text="Tamañon Fetal Adecuado:" wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                                      <Label text="Patologías:" GridPane.rowIndex="3" />
+                                                      <Label text="Fecha de Ingreso:" GridPane.columnIndex="6" />
+                                                      <CheckBox fx:id="chkAborto" mnemonicParsing="false" GridPane.columnIndex="1" />
+                                                      <Spinner fx:id="txtNConsultaPrenatal" GridPane.columnIndex="3" />
+                                                      <VBox GridPane.columnIndex="5">
+                                                         <children>
+                                                            <CheckBox fx:id="chkHospital" mnemonicParsing="false" />
+                                                            <CheckBox fx:id="chkCarnet" mnemonicParsing="false" />
+                                                         </children>
+                                                      </VBox>
+                                                      <DatePicker fx:id="dtpFechaIngreso" GridPane.columnIndex="7" />
+                                                      <CustomTextField fx:id="txtTemperaturaParto" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtEdadGestacional" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                      <PrefixSelectionComboBox fx:id="cmbPresentacionParto" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                      <CheckBox fx:id="chkTamanoFetalAdecuado" mnemonicParsing="false" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                                                      <PrefixSelectionComboBox fx:id="cmbInicioParto" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <PrefixSelectionComboBox fx:id="cmbMembranas" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                      <DatePicker fx:id="dtpFechaRuptura" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                                      <Label maxHeight="-Infinity" minHeight="-Infinity" text="Hora de la Ruptura:" wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                                      <CustomTextField fx:id="txtHoraRuptura" promptText="00:00" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                                                      <Label text="Terminación:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                      <Label minHeight="-Infinity" text="Fecha Terminación:" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                      <Label minHeight="-Infinity" text="Indicación principal:" wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                                      <CustomTextField fx:id="txtIndicacion" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                                                      <DatePicker fx:id="dtpFechaTerminacion" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                                      <PrefixSelectionComboBox fx:id="cmbTerminacion" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                      <Label minHeight="-Infinity" text="Muerte Intrauterina:" wrapText="true" GridPane.rowIndex="4" />
+                                                      <PrefixSelectionComboBox fx:id="cmbMuerteIntraUte" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <Label text="Episotomía:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                      <Label text="Desgarros:" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                                      <Label text="Alumb. Esponta.:" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                                                      <Label text="Placenta Compl.:" GridPane.rowIndex="5" />
+                                                      <Label minHeight="-Infinity" text="Medicación en parto:" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                      <Label minHeight="-Infinity" text="Atendió Parto:" wrapText="true" GridPane.rowIndex="6" />
+                                                      <Label minHeight="-Infinity" text="Nivel de Atención:" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                                      <Label minHeight="-Infinity" text="Nombre Recien Nacido:" wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                                                      <Label minHeight="-Infinity" text="Atendió Neonato:" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                                      <PrefixSelectionComboBox fx:id="cmbNivelAtencion" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                                                      <PrefixSelectionComboBox fx:id="cmbAtendioParto" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <PrefixSelectionComboBox fx:id="cmbAtendioNeonato" maxWidth="1.7976931348623157E308" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                                                      <Label minHeight="-Infinity" text="Nombre Atendió Neonato:" wrapText="true" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                                                      <Label minHeight="-Infinity" text="Nombre Atendió Parto:" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                      <CheckBox fx:id="chkEpisotomia" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                      <CheckBox fx:id="chkDesgarros" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                                                      <CheckBox fx:id="chkAlumbEsponta" mnemonicParsing="false" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                                                      <CheckBox fx:id="chkPlacentaCompl" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                      <CustomTextField fx:id="txtnombreAtenParto" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                                      <CustomTextField fx:id="txtnombreRn" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                                                      <CustomTextField fx:id="txtnombreAtenNeo" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                                                      <CheckComboBox fx:id="chkcmbPatologiasParto" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <CheckComboBox fx:id="chkcmbMedicacionParto" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </Tab>
+                        <Tab text="Trabajo de Parto">
+                           <content>
+                              <VBox prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT">
+                                       <children>
+                                          <ToggleSwitch fx:id="switchTrabParto" text="Editar">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </ToggleSwitch>
+                                       </children>
+                                    </HBox>
+                                    <TitledPane fx:id="tpaneTrabajoParto" animated="false" disable="true" text="Trabajos de Parto">
+                                       <content>
+                                          <VBox prefWidth="100.0" spacing="10.0">
+                                             <children>
+                                                <GridPane hgap="5.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Hora:" />
+                                                      <Label text="Tensión Arterial:" GridPane.columnIndex="4" />
+                                                      <Label text="Nombre Examinador:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                      <Label minHeight="-Infinity" text="Contracciones ( c/10 min):" wrapText="true" GridPane.columnIndex="2" />
+                                                      <Label text="Altura Uterina:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Label text="Dilatación Cervical:" GridPane.rowIndex="2" />
+                                                      <Label text="F.C.F. :" GridPane.rowIndex="1" />
+                                                      <Label text="Posición:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                      <Label text="Meconio:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <CustomTextField fx:id="txtFcfTrabParto" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtHoraTrabParto" GridPane.columnIndex="1" />
+                                                      <CustomTextField fx:id="txtContracciones" GridPane.columnIndex="3" />
+                                                      <CustomTextField fx:id="txtTensionArterial" GridPane.columnIndex="5" />
+                                                      <CustomTextField fx:id="txtAlturaUteTrabParto" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtPosicionTrabParto" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtDilatacionCerv" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <CustomTextField fx:id="txtMeconioTrabParto" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                      <CustomTextField fx:id="txtNombreExaminador" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                                <HBox alignment="TOP_RIGHT" maxWidth="-Infinity" prefWidth="800.0" spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="btnNuevoConsulta1" mnemonicParsing="false" text="Nuevo" />
+                                                      <Button fx:id="btnEliminarConsulta1" mnemonicParsing="false" onAction="#borrarTrabParto" text="Eliminar" />
+                                                      <Button fx:id="btnAgregarTrabParto" mnemonicParsing="false" onAction="#agregarTrabParto" text="Agregar" />
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="gridTrabParto" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="800.0" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </Tab>
+                        <Tab text="Recien Nacido ">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT">
+                                       <children>
+                                          <ToggleSwitch fx:id="switchRecienNacido" text="Editar">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </ToggleSwitch>
+                                       </children>
+                                    </HBox>
+                                    <TitledPane fx:id="tpaneRecienNacido" animated="false" collapsible="false" disable="true" text="Datos Recien Nacido">
+                                       <content>
+                                          <GridPane hgap="5.0" vgap="5.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Sexo:" />
+                                                <Label text="Apgar 1er Minuto:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                <Label text="Talla:" GridPane.columnIndex="4" />
+                                                <Label minHeight="-Infinity" text="Reanimación:" wrapText="true" GridPane.rowIndex="2" />
+                                                <Label minHeight="-Infinity" text="Edad por Ex. Físico:" wrapText="true" GridPane.rowIndex="1" />
+                                                <Label text="Examen Físico:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                <Label text="Per. Cefálico:" GridPane.columnIndex="6" />
+                                                <Label text="Apgar 6to Minuto:" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                                <Label text="Patologías:" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                                <Label text="Peso al Nacer:" GridPane.columnIndex="2" />
+                                                <Label text="Peso E.G.:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <Label text="VDRL:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                <Label text="Aloj Conjunto:" GridPane.rowIndex="3" />
+                                                <Label text="Hospitalizado:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                <Label text="B.C.G. :" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                <Label text="PV. O:" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                                <Label minHeight="-Infinity" text="Grupo Sanguíneo:" wrapText="true" GridPane.rowIndex="4" />
+                                                <Label text="Rh:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                <Label text="Observaciones:" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                                <PrefixSelectionComboBox fx:id="cmbSexo" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="1" />
+                                                <PrefixSelectionComboBox fx:id="cmbPesoEg" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                <PrefixSelectionComboBox fx:id="cmbReanimacion" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <PrefixSelectionComboBox fx:id="cmbVdrlRn" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                <CustomTextField fx:id="txtPesoNacer" GridPane.columnIndex="3" />
+                                                <CustomTextField fx:id="txtTallaRn" GridPane.columnIndex="5" />
+                                                <CustomTextField fx:id="txtPerCefalico" GridPane.columnIndex="7" />
+                                                <CustomTextField fx:id="txtEdadExFisico" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <CustomTextField fx:id="txtApgar1Min" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                <CustomTextField fx:id="txtApgar6Min" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                                                <PrefixSelectionComboBox fx:id="cmbExFisico" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                                <PrefixSelectionComboBox fx:id="cmbGrupoSanguineoRn" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextArea fx:id="txtObservacionesRn" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+                                                <CheckBox fx:id="chkAloj" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <CheckBox fx:id="chkHospitalizado" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                <CheckBox fx:id="chkBcg" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                                <CheckBox fx:id="chkPvo" mnemonicParsing="false" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                                                <PrefixSelectionComboBox fx:id="cmbRhRn" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                <CheckComboBox fx:id="chkcmbPatologiasRn" maxWidth="1.7976931348623157E308" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </Tab>
+                        <Tab text="Egreso">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT">
+                                       <children>
+                                          <ToggleSwitch fx:id="switchEgreso" text="Editar">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </ToggleSwitch>
+                                       </children>
+                                    </HBox>
+                                    <TitledPane fx:id="tpaneEgreso" collapsible="false" disable="true" text="Datos del Egreso">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <content>
+                                          <VBox spacing="10.0">
+                                             <children>
+                                                <Label text="Datos de Egreso del Recien Nacido">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane hgap="5.0" vgap="5.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="Fecha Egreso:" />
+                                                      <DatePicker fx:id="dtpFechaEgresoRn" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
+                                                      <Label text="Peso al Egreso:" GridPane.rowIndex="1" />
+                                                      <Label text="Estado Recie Nacido:" GridPane.columnIndex="2" />
+                                                      <Label text="Fecha Egreso:" />
+                                                      <Label text="Alimento:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtPesoEgresoRn" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <PrefixSelectionComboBox fx:id="cmbAlimento" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                      <PrefixSelectionComboBox fx:id="cmbEstadoRn" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="3" />
+                                                      <Label text="Responsable:" GridPane.rowIndex="2" />
+                                                      <CustomTextField fx:id="txtResponsableRn" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                   </children>
+                                                </GridPane>
+                                                <Label text="Datos de Egreso de la Madre">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane hgap="5.0" vgap="5.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label text="Fecha Egreso:" />
+                                                      <DatePicker fx:id="dtpFechaEgreso" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
+                                                      <Label text="Anticoncepción:" GridPane.rowIndex="1" />
+                                                      <Label text="Estado:" GridPane.columnIndex="2" />
+                                                      <Label text="Fecha Egreso:" />
+                                                      <PrefixSelectionComboBox fx:id="cmbEstado" maxWidth="1.7976931348623157E308" minWidth="-Infinity" GridPane.columnIndex="3" />
+                                                      <Label text="Responsable:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtResponsableMadre" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                      <PrefixSelectionComboBox fx:id="cmbAnticoncepcion" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </Tab>
+                        <Tab text="Puerperio">
+                           <content>
+                              <VBox alignment="TOP_CENTER" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="TOP_RIGHT">
+                                       <children>
+                                          <ToggleSwitch fx:id="switchPuerperio" text="Editar">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </ToggleSwitch>
+                                       </children>
+                                    </HBox>
+                                    <TitledPane fx:id="tpanePuerperio" collapsible="false" disable="true" maxWidth="-Infinity" prefWidth="800.0" text="Datos Puerperio" wrapText="true">
+                                       <content>
+                                          <VBox spacing="10.0">
+                                             <children>
+                                                <GridPane hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" vgap="5.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="150.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" prefWidth="150.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" prefWidth="150.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="100.0" prefWidth="150.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label text="Hora Post Parto:" />
+                                                      <Label text="Características de Loquios:" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                      <Label text="Invol. Ulterina:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Label text="Tension Arterial:" GridPane.rowIndex="1" />
+                                                      <Label text="Pulso:" GridPane.columnIndex="4" />
+                                                      <Label text="Temperatura:" GridPane.columnIndex="2" />
+                                                      <CustomTextField fx:id="txtTemperatura" GridPane.columnIndex="3" />
+                                                      <CustomTextField fx:id="txtPulso" GridPane.columnIndex="5" />
+                                                      <CustomTextField fx:id="txtTensionArterialPuerperio" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtInvoUterina" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtCaracteristicasLoquios" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                      <CustomTextField fx:id="txtHoraPostParto" GridPane.columnIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                                <HBox alignment="TOP_RIGHT" maxWidth="-Infinity" prefWidth="800.0" spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="btnNuevoPuerperio" mnemonicParsing="false" text="Nuevo" />
+                                                      <Button fx:id="btnEliminarPuerperio" mnemonicParsing="false" onAction="#borrarPuerperio" text="Eliminar" />
+                                                      <Button fx:id="btnAgregarPuerperio" mnemonicParsing="false" onAction="#agregarPuerperio" text="Agregar" />
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="gridPuerperio" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="800.0" />
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </Tab>
+                    </tabs>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </TabPane>
+                  <HBox alignment="TOP_RIGHT" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardar" prefHeight="50.0" prefWidth="100.0" text="Guardar" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</DecorationPane>

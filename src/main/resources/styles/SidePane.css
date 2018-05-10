@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/01/2018, 20:32:34
+    Author     : chiti
+*/
+.button {
+    -fx-background-color: white;
+    -fx-font-size: 12pt;
+    -fx-font-family: "Microsoft Sans Serif";
+    -fx-border-color: #ffcdef;
+}
+
+.button:hover {
+    -fx-background-color: #ffdcd2;
+}
+
+.button:pressed{
+    -fx-background-color: #ff98be;
+}
+.lbl-user-name{
+    -fx-font-family: "Microsoft Sans Serif";
+    -fx-font-size: 16pt;
+    -fx-font-style: bold;
+}
